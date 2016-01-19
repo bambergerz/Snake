@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # snake.py
 # Created by Zachary Bamberger (zeb3) and Yishai Gronich
 
@@ -470,4 +469,4 @@ class Snake(GameApp):
 	def end_game(self):
 		self._state = STATE_COMPLETE
 		self._mssg.text = "GAME OVER"
->>>>>>> origin/master
+
