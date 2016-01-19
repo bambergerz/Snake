@@ -381,6 +381,11 @@ class Snake(GameApp):
 					direction = DOWN
 				if direction is not None:
 					self._game.update_snake_direction(direction)
+		elif self._state == STATE_COMPLETE:
+			if self.input.is_key_down('spacebar'):
+				self._state = STATE_NEWGAME
+				self._time = 0
+				self._game = Play()
 
 
 	def draw(self):
@@ -468,5 +473,6 @@ class Snake(GameApp):
 
 	def end_game(self):
 		self._state = STATE_COMPLETE
-		self._mssg.text = "GAME OVER"
+		self._mssg.font_size = 24
+		self._mssg.text = "GAME OVER: Press Space-Bar to Restart"
 
